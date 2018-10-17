@@ -1,0 +1,64 @@
+.shadow{
+  box-shadow: 2px 2px 3px green;
+}
+
+.bordaDiv:first-of-type{
+  margin-top:100px;
+}
+.cameraFundo{
+ display: none;
+}
+.cameraFundo2{
+ display: none;
+}
+
+/*Configurações dispositivos medium/large devices*/
+@media (min-width:576px){
+  hr{
+    display: none;
+  }
+  
+}
+
+@media (min-width: 930px){
+  .cameraFundo{
+    display: block;
+    z-index: -1;
+    max-width: 20%;
+    height: auto;
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 150px;
+    left: -280px;
+    opacity: 0
+  }
+  .cameraFundo2{
+    display: block;
+    z-index: -1;
+    max-width: 20%;
+    height: auto;
+    transform: rotate(-15deg);
+    position: absolute;
+    right: 50px;
+    animation: rotateAnimation 5s;
+  }
+
+  @keyframes rotateAnimation{
+    0%{
+      top:0;
+      transform: rotate(25deg)
+    }
+    100%{
+      top: 140px;
+      
+    }
+  }
+}
+
+@media (min-width:1580px){
+  *{
+    font-size: 20px;
+  }
+}
+
+
